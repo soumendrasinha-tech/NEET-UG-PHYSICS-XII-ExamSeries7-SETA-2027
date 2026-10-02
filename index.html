@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumendra Sir's Biology Classes-8910587106 - NEET Physics CBT Exam Series 7 Set A</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js for visual performance breakdown -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- HTML2Canvas for capturing scorecard image -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- MathJax for rendering Physics LaTeX formulas -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* Anti-photo diagonal camera interference mesh overlay */
+        .anti-photo-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: 
+                repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.025) 0, rgba(0, 0, 0, 0.025) 1px, transparent 0, transparent 5px),
+                repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.025) 0, rgba(0, 0, 0, 0.025) 1px, transparent 0, transparent 5px);
+        }
+
+        /* Floating candidate watermark grid */
+        .watermark-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 9998;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            opacity: 0.12;
+            user-select: none;
+        }
+
+        .watermark-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: rotate(-25deg);
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #0f172a;
+            text-align: center;
+            white-space: pre-line;
+        }
+
+        /* Disable text selection across interface */
+        .no-select {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Custom scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 no-select min-h-screen flex flex-col justify-between" oncontextmenu="return false;" oncopy="return false;" oncut="return false;" onpaste="return false;">
+
+    <!-- Security Overlay Mesh & Dynamic Floating Watermark -->
+    <div class="anti-photo-overlay"></div>
+    <div id="watermarkGrid" class="watermark-container hidden"></div>
+
+    <!-- LOGIN / VERIFICATION MODAL GATE -->
+    <div id="verificationGate" class="fixed inset-0 bg-slate-900 bg-opacity-95 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-xl w-full p-6 md:p-8 border border-slate-200 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600"></div>
+            
+            <div class="text-center mb-6">
+                <h1 class="text-2xl md:text-3xl font-extrabold text-indigo-950 tracking-tight">Soumendra Sir's Biology Classes-8910587106</h1>
+                <p class="text-sm font-semibold text-slate-500 mt-1"><i class="fa-solid fa-phone mr-1"></i> Contact: +91 8910587106</p>
+                <div class="inline-block bg-indigo-50 text-indigo-800 text-xs font-bold px-3 py-1.5 rounded-full mt-3 border border-indigo-200">
+                    NEET PHYSICS XII EXAM SERIES 7 SET A
+                </div>
+            </div>
+
+            <!-- Rules & Info Box -->
+            <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 mb-6 text-xs text-slate-700 space-y-2">
+                <p class="font-bold text-slate-900 border-b pb-1 text-sm"><i class="fa-solid fa-atom text-indigo-600 mr-1.5"></i> Exam Instructions & Syllabus:</p>
+                <ul class="list-disc pl-4 space-y-1 leading-relaxed">
+                    <li><strong>Syllabus:</strong> Atoms & Nuclei (Rutherford Model, Bohr Atom, Spectral Series, Nucleus Size/Density, Mass Defect, Binding Energy, Nuclear Fission & Fusion).</li>
+                    <li><strong>Total Questions:</strong> 45 Questions | <strong>Total Marks:</strong> 180 Marks | <strong>Duration:</strong> 1 Hour (60 Mins).</li>
+                    <li><strong>Marking Scheme:</strong> <span class="text-emerald-700 font-bold">+4</span> for correct response, <span class="text-rose-600 font-bold">-1</span> for wrong response, <span class="text-slate-500 font-bold">0</span> for unattempted.</li>
+                    <li><strong>Anti-Cheating Rules:</strong> Fullscreen mode is mandatory. Switching tabs or exiting fullscreen triggers <span class="text-rose-600 font-bold">Auto-Submission</span>.</li>
+                    <li>Password format is today's date in <strong>DDMMYYYY</strong> format.</li>
+                </ul>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Candidate Full Name</label>
+                    <input type="text" id="candidateName" required placeholder="Enter your full name" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition-all" />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Exam Password (DDMMYYYY)</label>
+                        <input type="password" id="examPassword" required placeholder="DDMMYYYY" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm transition-all" />
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Security Captcha</label>
+                        <div class="flex items-center space-x-2">
+                            <span id="captchaDisplay" class="bg-slate-200 text-slate-800 font-mono font-bold px-3 py-2.5 rounded-lg text-center tracking-widest text-sm border border-slate-300 select-none">? + ? = ?</span>
+                            <button type="button" onclick="generateCaptcha()" class="text-slate-500 hover:text-slate-700 p-2"><i class="fa-solid fa-arrows-rotate"></i></button>
+                            <input type="text" id="captchaInput" required placeholder="Ans" class="w-20 px-3 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none text-sm text-center font-bold" />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="loginError" class="hidden bg-rose-50 text-rose-700 text-xs font-semibold p-2.5 rounded-lg border border-rose-200 text-center"></div>
+
+                <button type="submit" class="w-full py-3 bg-gradient-to-r from-indigo-700 to-purple-700 hover:from-indigo-800 hover:to-purple-800 text-white font-bold rounded-xl shadow-lg transition-all text-sm flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-play"></i>
+                    <span>START PHYSICS CBT EXAM</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CBT EXAM MAIN HEADER -->
+    <header class="bg-gradient-to-r from-indigo-950 via-slate-900 to-purple-950 text-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+            <div>
+                <h1 class="text-base md:text-lg font-bold tracking-tight">Soumendra Sir's Biology Classes-8910587106</h1>
+                <p class="text-xs text-indigo-200 font-medium">NEET PHYSICS XII EXAM SERIES 7 SET A | Atoms & Nuclei</p>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <div class="bg-slate-800/80 border border-slate-700 rounded-lg px-3 py-1.5 flex items-center space-x-2">
+                    <i class="fa-regular fa-clock text-amber-400 text-sm animate-pulse"></i>
+                    <span class="text-xs text-slate-300">Time Left:</span>
+                    <span id="timerDisplay" class="font-mono font-bold text-sm text-amber-300">60:00</span>
+                </div>
+                <div class="hidden sm:block bg-indigo-950 border border-indigo-800 rounded-lg px-3 py-1.5 text-xs text-right">
+                    <span class="text-slate-400 block text-[10px]">CANDIDATE</span>
+                    <span id="headerCandidateName" class="font-bold text-indigo-200">Candidate Name</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CBT WORKSPACE -->
+    <main id="cbtMainInterface" class="max-w-7xl mx-auto w-full px-2 sm:px-4 py-4 flex-grow flex flex-col md:flex-row gap-4">
+        
+        <!-- LEFT PANEL: QUESTION CONTAINER -->
+        <section class="flex-grow bg-white rounded-xl shadow-md border border-slate-200 flex flex-col justify-between overflow-hidden">
+            
+            <!-- Question Box Header -->
+            <div class="bg-slate-50 border-b border-slate-200 px-4 py-3 flex justify-between items-center">
+                <span class="text-xs md:text-sm font-bold text-slate-700 bg-slate-200 px-3 py-1 rounded-md" id="questionNumberBadge">
+                    Question 1 of 45
+                </span>
+                <span class="text-xs font-semibold text-slate-500">
+                    Marks: <span class="text-emerald-600 font-bold">+4</span> | <span class="text-rose-600 font-bold">-1</span>
+                </span>
+            </div>
+
+            <!-- Question Body Area -->
+            <div class="p-4 md:p-6 overflow-y-auto max-h-[calc(100vh-260px)] min-h-[380px]" id="questionContentArea">
+                <!-- Dynamic Question Content Rendered Here -->
+            </div>
+
+            <!-- CBT Action Control Bar -->
+            <div class="bg-slate-50 border-t border-slate-200 px-4 py-3 flex flex-wrap gap-2 items-center justify-between">
+                <div class="flex gap-2">
+                    <button onclick="markForReview()" class="px-3 py-2 bg-amber-100 hover:bg-amber-200 text-amber-800 border border-amber-300 text-xs font-bold rounded-lg transition-all flex items-center space-x-1">
+                        <i class="fa-regular fa-bookmark"></i>
+                        <span>Mark for Review</span>
+                    </button>
+                    <button onclick="clearResponse()" class="px-3 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-lg transition-all flex items-center space-x-1">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <span>Clear Response</span>
+                    </button>
+                </div>
+
+                <div class="flex gap-2">
+                    <button onclick="prevQuestion()" id="prevBtn" class="px-4 py-2 bg-slate-700 hover:bg-slate-800 text-white text-xs font-bold rounded-lg transition-all disabled:opacity-40">
+                        <i class="fa-solid fa-chevron-left mr-1"></i> Previous
+                    </button>
+                    <button onclick="nextQuestion()" id="nextBtn" class="px-4 py-2 bg-indigo-700 hover:bg-indigo-800 text-white text-xs font-bold rounded-lg transition-all shadow-md">
+                        Save & Next <i class="fa-solid fa-chevron-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT PANEL: COLOURFUL PALETTE DOTS -->
+        <aside class="w-full md:w-80 bg-white rounded-xl shadow-md border border-slate-200 p-4 flex flex-col justify-between min-w-[280px]">
+            <div>
+                <h2 class="text-sm font-bold text-slate-800 border-b border-slate-200 pb-2 mb-3 flex justify-between items-center">
+                    <span><i class="fa-solid fa-table-cells text-indigo-600 mr-1.5"></i> Question Palette</span>
+                </h2>
+
+                <!-- Status Legend -->
+                <div class="grid grid-cols-2 gap-2 text-[11px] mb-4 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block border border-emerald-600"></span>
+                        <span class="text-slate-600 font-medium">Answered (<span id="countAnswered">0</span>)</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-rose-500 inline-block border border-rose-600"></span>
+                        <span class="text-slate-600 font-medium">Not Answered (<span id="countNotAnswered">45</span>)</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-amber-400 inline-block border border-amber-500"></span>
+                        <span class="text-slate-600 font-medium">Marked Review (<span id="countMarked">0</span>)</span>
+                    </div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="w-3.5 h-3.5 rounded-full bg-slate-200 inline-block border border-slate-300"></span>
+                        <span class="text-slate-600 font-medium">Not Visited (<span id="countNotVisited">44</span>)</span>
+                    </div>
+                </div>
+
+                <!-- Palette Grid Container -->
+                <div id="paletteGrid" class="grid grid-cols-5 gap-2 max-h-72 md:max-h-96 overflow-y-auto p-1 border rounded-lg border-slate-100">
+                    <!-- Dots Generated Dynamically -->
+                </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-200">
+                <button onclick="confirmSubmitTest()" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg shadow-md transition-all text-xs flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>SUBMIT TEST</span>
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <!-- END RESULT & FEEDBACK REPORT (HIDDEN INITIALLY) -->
+    <div id="resultModal" class="hidden fixed inset-0 bg-slate-900 bg-opacity-95 z-50 overflow-y-auto p-4 flex items-center justify-center">
+        <div class="max-w-3xl w-full bg-white rounded-2xl shadow-2xl p-6 md:p-8 my-8 relative border border-slate-200">
+            
+            <!-- Result Card Container (Captured for Image) -->
+            <div id="resultCardCapture" class="p-4 bg-white rounded-xl border border-slate-200">
+                
+                <!-- Report Header -->
+                <div class="text-center border-b pb-4 mb-4">
+                    <h2 class="text-2xl font-extrabold text-indigo-950">Soumendra Sir's Biology Classes-8910587106</h2>
+                    <p class="text-xs font-semibold text-slate-500">Contact: +91 8910587106 | NEET PHYSICS XII EXAM SERIES 7 SET A</p>
+                    <div class="mt-2 inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1 rounded-full border border-emerald-300">
+                        OFFICIAL ATOMS & NUCLEI PERFORMANCE SCORECARD
+                    </div>
+                </div>
+
+                <!-- Candidate Info Summary -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs mb-6">
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">CANDIDATE NAME</span>
+                        <span id="resCandidateName" class="font-bold text-slate-800">Candidate Name</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">TOTAL MARKS</span>
+                        <span id="resTotalScore" class="font-bold text-indigo-700 text-base">0 / 180</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">TOTAL ATTEMPTED</span>
+                        <span id="resAttempted" class="font-bold text-slate-800">0 / 45</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-400 block text-[10px]">ACCURACY RATE</span>
+                        <span id="resAccuracy" class="font-bold text-emerald-600 text-base">0%</span>
+                    </div>
+                </div>
+
+                <!-- Graphical Representation & Detailed Breakdown -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
+                    <div class="w-full h-48 flex justify-center items-center">
+                        <canvas id="resultChart"></canvas>
+                    </div>
+
+                    <div class="space-y-2 text-xs">
+                        <div class="flex justify-between items-center p-2 rounded-md bg-emerald-50 border border-emerald-200">
+                            <span class="font-semibold text-emerald-800"><i class="fa-solid fa-circle-check text-emerald-600 mr-1.5"></i> Correct Answers (+4)</span>
+                            <span id="resCorrect" class="font-bold text-emerald-800 text-sm">0</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 rounded-md bg-rose-50 border border-rose-200">
+                            <span class="font-semibold text-rose-800"><i class="fa-solid fa-circle-xmark text-rose-600 mr-1.5"></i> Incorrect Answers (-1)</span>
+                            <span id="resIncorrect" class="font-bold text-rose-800 text-sm">0</span>
+                        </div>
+                        <div class="flex justify-between items-center p-2 rounded-md bg-slate-100 border border-slate-200">
+                            <span class="font-semibold text-slate-700"><i class="fa-solid fa-circle-minus text-slate-400 mr-1.5"></i> Unattempted Questions (0)</span>
+                            <span id="resUnattempted" class="font-bold text-slate-700 text-sm">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-[10px] text-center text-slate-400 border-t pt-2">
+                    Generated automatically by NEET Physics CBT Exam System | Verified & Authenticated Report
+                </div>
+            </div>
+
+            <!-- WhatsApp Send Button -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+                <button onclick="sendMarksToWhatsApp()" class="flex-1 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition-all text-xs flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>SEND RESULT CARD TO SIR (+91 8910587106)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // MASTER QUESTION BANK (45 QUESTIONS: Atoms & Nuclei)
+        const masterQuestions = [
+            
+            // ================= 10 STATEMENT-BASED QUESTIONS =================
+            {
+                type: "statement",
+                id: 1,
+                q: "Evaluate the statements regarding Rutherford's $\\alpha$-particle scattering experiment:",
+                statement1: "The fraction of $\\alpha$-particles scattered at angles greater than $90^\\circ$ is approximately 1 in 8000.",
+                statement2: "The impact parameter $b$ is zero for $\\alpha$-particles that rebound directly backwards with scattering angle $\\theta = 180^\\circ$.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 2,
+                q: "Consider the postulates and outcomes of Bohr's atomic model:",
+                statement1: "The angular momentum of an electron orbiting around a hydrogen nucleus is quantized as $L = \\frac{nh}{2\\pi}$.",
+                statement2: "The kinetic energy of an electron in a hydrogen atom is equal in magnitude to half of its potential energy, but positive.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 3,
+                q: "Select the correct option regarding hydrogen spectral series:",
+                statement1: "Lyman series lies in the ultraviolet region and corresponds to transitions from outer orbits to $n=1$.",
+                statement2: "Paschen, Brackett, and Pfund series lie in the infrared region of the electromagnetic spectrum.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 4,
+                q: "Evaluate the statements regarding nuclear size and nuclear density:",
+                statement1: "The radius of a nucleus $R$ is directly proportional to the mass number $A$, given by $R = R_0 A$.",
+                statement2: "Nuclear matter density is independent of the mass number $A$ and is nearly constant ($\\approx 2.3 \\times 10^{17} \\text{ kg/m}^3$).",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 3
+            },
+            {
+                type: "statement",
+                id: 5,
+                q: "Read the statements regarding Binding Energy per nucleon ($E_{bn}$):",
+                statement1: "The binding energy per nucleon is maximum for ${}^{56}_{26}\\text{Fe}$, having a value of approximately $8.75\\text{ MeV}$.",
+                statement2: "Nuclei with mass numbers $A < 30$ and $A > 170$ have lower binding energy per nucleon, making them susceptible to fusion and fission respectively.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 6,
+                q: "Consider nuclear force properties:",
+                statement1: "Nuclear forces are strongly attractive, short-range forces that show saturation property.",
+                statement2: "Nuclear forces are charge-dependent, being much stronger between two protons than between two neutrons.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 2
+            },
+            {
+                type: "statement",
+                id: 7,
+                q: "Evaluate statements on nuclear fission reactions:",
+                statement1: "When ${}^{235}_{92}\\text{U}$ absorbs a thermal neutron, it undergoes fission releasing about $200\\text{ MeV}$ energy per fission event.",
+                statement2: "Cadmium or Boron rods are used as moderators in a nuclear reactor to slow down fast neutrons.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 2
+            },
+            {
+                type: "statement",
+                id: 8,
+                q: "Read statements on thermonuclear fusion in stars:",
+                statement1: "Thermonuclear fusion requires extremely high temperatures ($\\approx 10^7\\text{ K}$) to overcome the Coulombic repulsion between light nuclei.",
+                statement2: "In proton-proton cycle, four hydrogen nuclei fuse to form one helium nucleus with a release of about $26.7\\text{ MeV}$ of energy.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+            {
+                type: "statement",
+                id: 9,
+                q: "Consider atomic radii scaling in Bohr atom model:",
+                statement1: "The radius of $n^{\\text{th}}$ orbit in hydrogen atom is directly proportional to the principal quantum number $n$.",
+                statement2: "The orbital speed of an electron in $n^{\\text{th}}$ orbit is inversely proportional to $n$.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 3
+            },
+            {
+                type: "statement",
+                id: 10,
+                q: "Evaluate statements regarding mass defect and atomic mass unit ($1\\text{ u}$):",
+                statement1: "One atomic mass unit ($1\\text{ u}$) is equal to $\\frac{1}{12}$th of the mass of one ${}^{12}_{6}\\text{C}$ atom.",
+                statement2: "The energy equivalent of $1\\text{ u}$ of mass defect is equal to $931.5\\text{ MeV}$.",
+                options: [
+                    "Both Statement I and Statement II are correct.",
+                    "Both Statement I and Statement II are incorrect.",
+                    "Statement I is correct but Statement II is incorrect.",
+                    "Statement I is incorrect but Statement II is correct."
+                ],
+                correct: 0
+            },
+
+            // ================= 5 ASSERTION & REASONING QUESTIONS =================
+            {
+                type: "ar",
+                id: 11,
+                q: "Assertion (A): For hydrogen atom, the ionization energy is $13.6\\text{ eV}$.\nReason (R): The energy of the electron in ground state ($n=1$) of hydrogen atom is $-13.6\\text{ eV}$.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 12,
+                q: "Assertion (A): Heavy nuclei ($A > 230$) tend to undergo fission to gain stability.\nReason (R): The binding energy per nucleon for heavy nuclei is less than that for intermediate nuclei ($30 < A < 170$).",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 13,
+                q: "Assertion (A): Electrons in an atom do not fall into the nucleus despite experiencing attractive electrostatic force.\nReason (R): De Broglie hypothesis requires that the electron orbit must form a stationary standing wave with circumference equal to an integral multiple of de Broglie wavelength.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 14,
+                q: "Assertion (A): Density of ${}^{238}_{92}\\text{U}$ nucleus is equal to the density of ${}^{4}_{2}\\text{He}$ nucleus.\nReason (R): Nuclear radius is proportional to $A^{1/3}$, making nuclear volume proportional to mass number $A$.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+            {
+                type: "ar",
+                id: 15,
+                q: "Assertion (A): Thermonuclear fusion is the energy source of the sun and hydrogen bombs.\nReason (R): In nuclear fusion, lighter nuclei combine to form a heavier nucleus with a net loss of mass, which manifests as liberated energy.",
+                options: [
+                    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+                    "Both (A) and (R) are true but (R) is NOT the correct explanation of (A).",
+                    "(A) is true but (R) is false.",
+                    "(A) is false but (R) is true."
+                ],
+                correct: 0
+            },
+
+            // ================= 5 CASE STUDY-BASED QUESTIONS =================
+            {
+                type: "case",
+                id: 16,
+                caseTitle: "CASE STUDY: Bohr's Quantized Hydrogen Model",
+                caseText: "Niels Bohr combined classical physics with quantum concepts to propose three postulates for the hydrogen atom. According to Bohr, electrons revolve in non-radiating stable stationary orbits where angular momentum $L = mvr = \\frac{nh}{2\\pi}$. Energy emitted during electronic transitions between states $n_2 \\rightarrow n_1$ is $h\\nu = E_{n2} - E_{n1}$. The radius of $n^{\\text{th}}$ orbit is $r_n = \\frac{n^2 h^2 \\epsilon_0}{\\pi m e^2} = 0.529 n^2\\text{ \\AA}$, and orbit energy is $E_n = -\\frac{13.6}{n^2}\\text{ eV}$.",
+                q: "What is the ratio of the radius of the first excited state ($n=2$) to the second excited state ($n=3$) in a Hydrogen atom?",
+                options: [
+                    "$4 : 9$",
+                    "$2 : 3$",
+                    "$1 : 4$",
+                    "$9 : 4$"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 17,
+                caseTitle: "CASE STUDY: Bohr's Quantized Hydrogen Model",
+                caseText: "Niels Bohr combined classical physics with quantum concepts to propose three postulates for the hydrogen atom. According to Bohr, electrons revolve in non-radiating stable stationary orbits where angular momentum $L = mvr = \\frac{nh}{2\\pi}$. Energy emitted during electronic transitions between states $n_2 \\rightarrow n_1$ is $h\\nu = E_{n2} - E_{n1}$. The radius of $n^{\\text{th}}$ orbit is $r_n = \\frac{n^2 h^2 \\epsilon_0}{\\pi m e^2} = 0.529 n^2\\text{ \\AA}$, and orbit energy is $E_n = -\\frac{13.6}{n^2}\\text{ eV}$.",
+                q: "What is the orbital period $T$ dependence on principal quantum number $n$ in Bohr's model?",
+                options: [
+                    "$T \\propto n^3$",
+                    "$T \\propto n^2$",
+                    "$T \\propto n$",
+                    "$T \\propto n^{3/2}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 18,
+                caseTitle: "CASE STUDY: Bohr's Quantized Hydrogen Model",
+                caseText: "Niels Bohr combined classical physics with quantum concepts to propose three postulates for the hydrogen atom. According to Bohr, electrons revolve in non-radiating stable stationary orbits where angular momentum $L = mvr = \\frac{nh}{2\\pi}$. Energy emitted during electronic transitions between states $n_2 \\rightarrow n_1$ is $h\\nu = E_{n2} - E_{n1}$. The radius of $n^{\\text{th}}$ orbit is $r_n = \\frac{n^2 h^2 \\epsilon_0}{\\pi m e^2} = 0.529 n^2\\text{ \\AA}$, and orbit energy is $E_n = -\\frac{13.6}{n^2}\\text{ eV}$.",
+                q: "What is the total energy of an electron revolving in the second orbit ($n=2$) of $\\text{Li}^{2+}$ ion?",
+                options: [
+                    "$-30.6\\text{ eV}$",
+                    "$-13.6\\text{ eV}$",
+                    "$-54.4\\text{ eV}$",
+                    "$-27.2\\text{ eV}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 19,
+                caseTitle: "CASE STUDY: Bohr's Quantized Hydrogen Model",
+                caseText: "Niels Bohr combined classical physics with quantum concepts to propose three postulates for the hydrogen atom. According to Bohr, electrons revolve in non-radiating stable stationary orbits where angular momentum $L = mvr = \\frac{nh}{2\\pi}$. Energy emitted during electronic transitions between states $n_2 \\rightarrow n_1$ is $h\\nu = E_{n2} - E_{n1}$. The radius of $n^{\\text{th}}$ orbit is $r_n = \\frac{n^2 h^2 \\epsilon_0}{\\pi m e^2} = 0.529 n^2\\text{ \\AA}$, and orbit energy is $E_n = -\\frac{13.6}{n^2}\\text{ eV}$.",
+                q: "What is the kinetic energy of an electron in the ground state of Hydrogen atom?",
+                options: [
+                    "$+13.6\\text{ eV}$",
+                    "$-13.6\\text{ eV}$",
+                    "$+27.2\\text{ eV}$",
+                    "$-27.2\\text{ eV}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "case",
+                id: 20,
+                caseTitle: "CASE STUDY: Bohr's Quantized Hydrogen Model",
+                caseText: "Niels Bohr combined classical physics with quantum concepts to propose three postulates for the hydrogen atom. According to Bohr, electrons revolve in non-radiating stable stationary orbits where angular momentum $L = mvr = \\frac{nh}{2\\pi}$. Energy emitted during electronic transitions between states $n_2 \\rightarrow n_1$ is $h\\nu = E_{n2} - E_{n1}$. The radius of $n^{\\text{th}}$ orbit is $r_n = \\frac{n^2 h^2 \\epsilon_0}{\\pi m e^2} = 0.529 n^2\\text{ \\AA}$, and orbit energy is $E_n = -\\frac{13.6}{n^2}\\text{ eV}$.",
+                q: "According to de Broglie's explanation of Bohr's second postulate, how many de Broglie wavelengths fit into the $n=3$ orbit?",
+                options: [
+                    "3 wavelengths",
+                    "6 wavelengths",
+                    "1.5 wavelengths",
+                    "9 wavelengths"
+                ],
+                correct: 0
+            },
+
+            // ================= 15 NUMERICAL CRITICAL THINKING QUESTIONS =================
+            {
+                type: "critical",
+                id: 21,
+                q: "Calculate the shortest wavelength (series limit) of the Balmer series in Hydrogen atom spectrum ($R = 1.097 \\times 10^7\\text{ m}^{-1}$):",
+                options: [
+                    "$364.6\\text{ nm}$",
+                    "$656.3\\text{ nm}$",
+                    "$91.2\\text{ nm}$",
+                    "$121.6\\text{ nm}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 22,
+                q: "The distance of closest approach of an $\\alpha$-particle ($K = 5\\text{ MeV}$) fired at a gold nucleus ($Z = 79$) is $d$. If the kinetic energy of $\\alpha$-particle is doubled to $10\\text{ MeV}$, the new distance of closest approach becomes:",
+                options: [
+                    "$d / 2$",
+                    "$d / 4$",
+                    "$2d$",
+                    "$4d$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 23,
+                q: "If the radius of ${}^{27}_{13}\\text{Al}$ nucleus is $3.6\\text{ fm}$, calculate the estimated radius of ${}^{125}_{52}\\text{Te}$ nucleus:",
+                options: [
+                    "$6.0\\text{ fm}$",
+                    "$4.8\\text{ fm}$",
+                    "$7.2\\text{ fm}$",
+                    "$5.4\\text{ fm}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 24,
+                q: "Calculate the binding energy per nucleon of a ${}^{4}_{2}\\text{He}$ nucleus. Given mass of ${}^{4}_{2}\\text{He} = 4.0015\\text{ u}$, mass of proton = $1.0073\\text{ u}$, mass of neutron = $1.0087\\text{ u}$ ($1\\text{ u} = 931.5\\text{ MeV}$):",
+                options: [
+                    "$7.1\\text{ MeV/nucleon}$",
+                    "$28.4\\text{ MeV/nucleon}$",
+                    "$14.2\\text{ MeV/nucleon}$",
+                    "$3.55\\text{ MeV/nucleon}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 25,
+                q: "A heavy nucleus $X$ with mass number $A=240$ and binding energy per nucleon $7.6\\text{ MeV}$ splits into two fragments $Y$ and $Z$ with mass numbers $A_1=120$ and $A_2=120$ having binding energy per nucleon $8.5\\text{ MeV}$. Calculate total energy liberated in this fission reaction:",
+                options: [
+                    "$216\\text{ MeV}$",
+                    "$108\\text{ MeV}$",
+                    "$432\\text{ MeV}$",
+                    "$180\\text{ MeV}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 26,
+                q: "Find the ratio of minimum to maximum wavelength of photon emitted during electronic transitions in Balmer series of Hydrogen atom:",
+                options: [
+                    "$5 : 9$",
+                    "$3 : 4$",
+                    "$1 : 4$",
+                    "$9 : 16$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 27,
+                q: "An electron in hydrogen atom absorbs $12.75\\text{ eV}$ energy from ground state. To which highest energy level ($n$) does it get excited?",
+                options: [
+                    "$n = 4$",
+                    "$n = 3$",
+                    "$n = 5$",
+                    "$n = 2$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 28,
+                q: "When an electron transitions from $n=4$ state to ground state ($n=1$) in a sample of hydrogen atoms, how many maximum spectral lines can be emitted?",
+                options: [
+                    "6 spectral lines",
+                    "4 spectral lines",
+                    "3 spectral lines",
+                    "10 spectral lines"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 29,
+                q: "What is the ratio of de Broglie wavelengths of electron in $n=1$ and $n=2$ orbits of Hydrogen atom?",
+                options: [
+                    "$1 : 2$",
+                    "$1 : 4$",
+                    "$2 : 1$",
+                    "$4 : 1$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 30,
+                q: "Mass defect of a nucleus is $0.03\\text{ u}$. What is its total binding energy in $\\text{MeV}$?",
+                options: [
+                    "$27.945\\text{ MeV}$",
+                    "$93.15\\text{ MeV}$",
+                    "$13.97\\text{ MeV}$",
+                    "$55.89\\text{ MeV}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 31,
+                q: "Calculate the energy released in fusion reaction: ${}^{2}_{1}\\text{H} + {}^{2}_{1}\\text{H} \\rightarrow {}^{4}_{2}\\text{He} + Q$.\nGiven atomic masses: $m({}^{2}_{1}\\text{H}) = 2.0141\\text{ u}$, $m({}^{4}_{2}\\text{He}) = 4.0026\\text{ u}$:",
+                options: [
+                    "$23.85\\text{ MeV}$",
+                    "$12.42\\text{ MeV}$",
+                    "$2.24\\text{ MeV}$",
+                    "$9.31\\text{ MeV}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 32,
+                q: "The angular momentum of an electron in a hydrogen-like ion is $\\frac{3h}{2\\pi}$. Calculate the kinetic energy of this electron if $Z = 2$ ($\\text{He}^+$ ion):",
+                options: [
+                    "$6.04\\text{ eV}$",
+                    "$13.6\\text{ eV}$",
+                    "$27.2\\text{ eV}$",
+                    "$3.4\\text{ eV}$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 33,
+                q: "Ratio of nuclear mass densities of two nuclei with mass numbers $A_1 = 8$ and $A_2 = 64$ is:",
+                options: [
+                    "$1 : 1$",
+                    "$1 : 8$",
+                    "$1 : 2$",
+                    "$1 : 4$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 34,
+                q: "The Rydberg constant for Hydrogen is $R$. What is the Rydberg constant for a singly ionized helium atom ($\\text{He}^+$)?",
+                options: [
+                    "$4R$",
+                    "$2R$",
+                    "$R / 2$",
+                    "$R / 4$"
+                ],
+                correct: 0
+            },
+            {
+                type: "critical",
+                id: 35,
+                q: "Calculate the frequency of radiation emitted when an electron jumps from $n=3$ to $n=2$ level in Hydrogen ($R = 1.097 \\times 10^7\\text{ m}^{-1}$, $c = 3 \\times 10^8\\text{ m/s}$):",
+                options: [
+                    "$4.57 \\times 10^{14}\\text{ Hz}$",
+                    "$6.12 \\times 10^{14}\\text{ Hz}$",
+                    "$2.46 \\times 10^{15}\\text{ Hz}$",
+                    "$7.89 \\times 10^{14}\\text{ Hz}$"
+                ],
+                correct: 0
+            },
+
+            // ================= 10 DIAGRAM-BASED QUESTIONS (WITH INLINE SVG) =================
+            {
+                type: "diagram",
+                id: 36,
+                svg: `<svg viewBox="0 0 300 160" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-900">
+                    <line x1="30" y1="20" x2="270" y2="20" stroke="#f87171" stroke-width="2"/>
+                    <text x="275" y="24" fill="#f87171" font-size="10" font-weight="bold">n = 4 (-0.85 eV)</text>
+                    
+                    <line x1="30" y1="50" x2="270" y2="50" stroke="#fbbf24" stroke-width="2"/>
+                    <text x="275" y="54" fill="#fbbf24" font-size="10" font-weight="bold">n = 3 (-1.51 eV)</text>
+                    
+                    <line x1="30" y1="90" x2="270" y2="90" stroke="#34d399" stroke-width="2"/>
+                    <text x="275" y="94" fill="#34d399" font-size="10" font-weight="bold">n = 2 (-3.40 eV)</text>
+                    
+                    <line x1="30" y1="140" x2="270" y2="140" stroke="#60a5fa" stroke-width="2"/>
+                    <text x="275" y="144" fill="#60a5fa" font-size="10" font-weight="bold">n = 1 (-13.6 eV)</text>
+
+                    <!-- Transition Arrow A -->
+                    <line x1="70" y1="20" x2="70" y2="135" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+                    <text x="65" y="80" fill="#38bdf8" font-size="11" font-weight="bold">A</text>
+
+                    <!-- Transition Arrow B -->
+                    <line x1="140" y1="50" x2="140" y2="85" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrow)"/>
+                    <text x="135" y="72" fill="#f43f5e" font-size="11" font-weight="bold">B</text>
+
+                    <!-- Transition Arrow C -->
+                    <line x1="210" y1="20" x2="210" y2="45" stroke="#a855f7" stroke-width="2" marker-end="url(#arrow)"/>
+                    <text x="205" y="38" fill="#a855f7" font-size="11" font-weight="bold">C</text>
+
+                    <defs>
+                      <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffffff" />
+                      </marker>
+                    </defs>
+                </svg>`,
+                q: "Refer to the given hydrogen energy level transitions (A, B, C). Which transition emits a photon of the shortest wavelength (highest frequency)?",
+                options: [
+                    "Transition A ($n=4 \\rightarrow n=1$)",
+                    "Transition B ($n=3 \\rightarrow n=2$)",
+                    "Transition C ($n=4 \\rightarrow n=3$)",
+                    "All three transitions have equal wavelength"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 37,
+                svg: `<svg viewBox="0 0 300 150" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-50">
+                    <circle cx="150" cy="75" r="14" fill="#ef4444" opacity="0.9"/>
+                    <text x="142" y="79" fill="#ffffff" font-size="10" font-weight="bold">Ze</text>
+                    
+                    <!-- Incoming trajectory -->
+                    <path d="M 20 20 L 100 20 Q 140 20 170 40 Q 220 75 270 120" stroke="#2563eb" stroke-width="2.5" fill="none" stroke-dasharray="4"/>
+                    <circle cx="20" cy="20" r="5" fill="#2563eb"/>
+                    <text x="15" y="12" fill="#1e40af" font-size="10" font-weight="bold">α-particle</text>
+
+                    <!-- Central line -->
+                    <line x1="20" y1="75" x2="136" y2="75" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2"/>
+                    
+                    <!-- Distance of closest approach marker -->
+                    <line x1="136" y1="65" x2="136" y2="85" stroke="#16a34a" stroke-width="2"/>
+                    <text x="130" y="98" fill="#16a34a" font-size="11" font-weight="bold">r₀</text>
+                    
+                    <!-- Impact Parameter marker -->
+                    <line x1="40" y1="20" x2="40" y2="75" stroke="#d97706" stroke-width="1.5"/>
+                    <text x="45" y="50" fill="#d97706" font-size="11" font-weight="bold">b</text>
+                </svg>`,
+                q: "In Rutherford's scattering trajectory diagram shown above, what parameter is represented by 'b'?",
+                options: [
+                    "Impact parameter",
+                    "Distance of closest approach",
+                    "Nuclear radius",
+                    "De Broglie wavelength"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 38,
+                svg: `<svg viewBox="0 0 300 160" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-50">
+                    <!-- Axes -->
+                    <line x1="30" y1="130" x2="280" y2="130" stroke="#334155" stroke-width="2"/>
+                    <line x1="30" y1="130" x2="30" y2="15" stroke="#334155" stroke-width="2"/>
+                    <text x="220" y="145" fill="#334155" font-size="9" font-weight="bold">Mass Number (A)</text>
+                    <text x="5" y="12" fill="#334155" font-size="8" font-weight="bold">E_bn (MeV)</text>
+
+                    <!-- BE Curve -->
+                    <path d="M 35 120 Q 45 40 60 25 T 90 22 Q 150 25 270 65" stroke="#2563eb" stroke-width="3" fill="none"/>
+                    
+                    <!-- PeakFe Peak -->
+                    <circle cx="90" cy="22" r="4" fill="#dc2626"/>
+                    <text x="80" y="14" fill="#dc2626" font-size="9" font-weight="bold">Fe-56 (8.75 MeV)</text>
+
+                    <!-- Fission Region -->
+                    <text x="210" y="85" fill="#7c3aed" font-size="9" font-weight="bold">Fission Region</text>
+
+                    <!-- Fusion Region -->
+                    <text x="35" y="70" fill="#059669" font-size="9" font-weight="bold">Fusion Region</text>
+                </svg>`,
+                q: "Based on the Binding Energy per nucleon ($E_{bn}$) curve above, why is energy released during nuclear fusion of light nuclei ($A < 20$)?",
+                options: [
+                    "Binding energy per nucleon of fused product nucleus is higher than fusing lighter nuclei",
+                    "Binding energy per nucleon decreases after fusion",
+                    "Nuclear force becomes repulsive at small distances",
+                    "Total number of nucleons increases after fusion"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 39,
+                svg: `<svg viewBox="0 0 300 150" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-900">
+                    <!-- Nucleus -->
+                    <circle cx="150" cy="75" r="18" fill="#e11d48"/>
+                    <text x="142" y="79" fill="#ffffff" font-size="9" font-weight="bold">U-235</text>
+
+                    <!-- Thermal Neutron -->
+                    <circle cx="20" cy="75" r="5" fill="#38bdf8"/>
+                    <line x1="25" y1="75" x2="128" y2="75" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3"/>
+                    <text x="45" y="68" fill="#38bdf8" font-size="9">Neutron</text>
+
+                    <!-- Fission Products -->
+                    <line x1="165" y1="65" x2="240" y2="30" stroke="#f59e0b" stroke-width="2"/>
+                    <circle cx="245" cy="28" r="12" fill="#f59e0b"/>
+                    <text x="238" y="31" fill="#ffffff" font-size="8" font-weight="bold">Ba-144</text>
+
+                    <line x1="165" y1="85" x2="240" y2="120" stroke="#10b981" stroke-width="2"/>
+                    <circle cx="245" cy="122" r="10" fill="#10b981"/>
+                    <text x="238" y="125" fill="#ffffff" font-size="8" font-weight="bold">Kr-89</text>
+
+                    <!-- Neutrons Out -->
+                    <circle cx="260" cy="65" r="3" fill="#38bdf8"/>
+                    <circle cx="270" cy="75" r="3" fill="#38bdf8"/>
+                    <circle cx="260" cy="85" fill="#38bdf8" r="3"/>
+                </svg>`,
+                q: "The diagram above illustrates thermal neutron induced fission of ${}^{235}_{92}\\text{U}$. How many secondary neutrons are typically released per fission event?",
+                options: [
+                    "2 to 3 neutrons",
+                    "Exactly 1 neutron",
+                    "5 to 6 neutrons",
+                    "0 neutrons"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 40,
+                svg: `<svg viewBox="0 0 300 150" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-50">
+                    <circle cx="150" cy="75" r="60" stroke="#cbd5e1" stroke-width="1.5" fill="none" stroke-dasharray="4"/>
+                    <circle cx="150" cy="75" r="35" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+                    <circle cx="150" cy="75" r="15" stroke="#64748b" stroke-width="1.5" fill="none"/>
+
+                    <!-- Standing wave path -->
+                    <path d="M 150 15 Q 165 20 175 30 Q 185 40 185 55 Q 200 65 210 75 Q 200 85 185 95 Q 185 110 175 120 Q 165 130 150 135 Q 135 130 125 120 Q 115 110 115 95 Q 100 85 90 75 Q 100 65 115 55 Q 115 40 125 30 Q 135 20 150 15" stroke="#2563eb" stroke-width="2.5" fill="none"/>
+                    
+                    <circle cx="150" cy="75" r="8" fill="#ef4444"/>
+                    <text x="146" y="78" fill="#ffffff" font-size="8" font-weight="bold">p+</text>
+                </svg>`,
+                q: "What fundamental quantum condition does de Broglie standing wave model around a hydrogen nucleus represent in the diagram above?",
+                options: [
+                    "$2\\pi r = n\\lambda$ (Quantization of electron orbit circumference)",
+                    "$2\\pi r = n^2 \\lambda$",
+                    "$\\lambda = h / m e^2$",
+                    "$E = h\\nu / 2\\pi$"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 41,
+                svg: `<svg viewBox="0 0 300 150" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-900">
+                    <line x1="40" y1="130" x2="260" y2="130" stroke="#475569" stroke-width="2"/>
+                    
+                    <!-- Spectral lines -->
+                    <line x1="60" y1="20" x2="60" y2="130" stroke="#ef4444" stroke-width="3"/>
+                    <text x="52" y="15" fill="#ef4444" font-size="8" font-weight="bold">656 nm (H_α)</text>
+
+                    <line x1="110" y1="20" x2="110" y2="130" stroke="#3b82f6" stroke-width="2.5"/>
+                    <text x="102" y="15" fill="#3b82f6" font-size="8" font-weight="bold">486 nm (H_β)</text>
+
+                    <line x1="150" y1="20" x2="150" y2="130" stroke="#8b5cf6" stroke-width="2"/>
+                    <text x="142" y="15" fill="#8b5cf6" font-size="8" font-weight="bold">434 nm (H_γ)</text>
+
+                    <line x1="180" y1="20" x2="180" y2="130" stroke="#d946ef" stroke-width="1.5"/>
+                    <text x="172" y="15" fill="#d946ef" font-size="8" font-weight="bold">410 nm</text>
+
+                    <text x="210" y="75" fill="#f59e0b" font-size="10" font-weight="bold">Balmer Series</text>
+                </svg>`,
+                q: "The diagram depicts visible spectral lines of Balmer series of hydrogen. What transition produces the first red $H_\\alpha$ line ($656.3\\text{ nm}$)?",
+                options: [
+                    "$n=3 \\rightarrow n=2$",
+                    "$n=4 \\rightarrow n=2$",
+                    "$n=2 \\rightarrow n=1$",
+                    "$n=\\infty \\rightarrow n=2$"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 42,
+                svg: `<svg viewBox="0 0 300 140" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-50">
+                    <line x1="30" y1="110" x2="270" y2="110" stroke="#334155" stroke-width="2"/>
+                    <line x1="30" y1="110" x2="30" y2="15" stroke="#334155" stroke-width="2"/>
+                    
+                    <text x="130" y="130" fill="#334155" font-size="9" font-weight="bold">Separation distance r (fm)</text>
+                    <text x="5" y="12" fill="#334155" font-size="8" font-weight="bold">Potential Energy V(r)</text>
+
+                    <!-- Potential Energy Curve -->
+                    <path d="M 45 20 Q 55 125 70 125 Q 90 120 120 95 Q 180 85 260 85" stroke="#059669" stroke-width="2.5" fill="none"/>
+                    
+                    <line x1="30" y1="85" x2="270" y2="85" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2"/>
+                    
+                    <!-- r0 minimum -->
+                    <line x1="70" y1="85" x2="70" y2="125" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="2"/>
+                    <text x="65" y="138" fill="#dc2626" font-size="9" font-weight="bold">r₀ ≈ 0.8 fm</text>
+                </svg>`,
+                q: "From the nuclear potential energy curve $V(r)$ shown, what happens when distance $r$ between two nucleons becomes less than $r_0 \\approx 0.8\\text{ fm}$?",
+                options: [
+                    "Nuclear force becomes strongly repulsive",
+                    "Nuclear force becomes strongly attractive",
+                    "Nuclear force becomes zero",
+                    "Electrostatic force dominates completely"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 43,
+                svg: `<svg viewBox="0 0 300 140" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-900">
+                    <!-- Target Nucleus -->
+                    <circle cx="200" cy="70" r="12" fill="#e11d48"/>
+                    
+                    <!-- Deflected alpha particle trajectories -->
+                    <path d="M 20 20 L 120 20 Q 170 20 230 5" stroke="#f59e0b" stroke-width="2" fill="none"/>
+                    <path d="M 20 45 L 130 45 Q 170 48 240 30" stroke="#f59e0b" stroke-width="2" fill="none"/>
+                    <path d="M 20 70 L 140 70 Q 180 70 20 85" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+                    <path d="M 20 95 L 130 95 Q 170 92 240 110" stroke="#f59e0b" stroke-width="2" fill="none"/>
+                </svg>`,
+                q: "In Rutherford's gold foil experiment shown above, what major deduction was made from the observation that 1 in 8000 $\\alpha$-particles bounces straight back ($180^\\circ$ deflection)?",
+                options: [
+                    "Entire positive charge and almost whole mass of atom is concentrated in a tiny central nucleus",
+                    "Electrons revolve in fixed circular orbits",
+                    "Atom is a solid positively charged sphere with embedded electrons",
+                    "Neutrons are present inside the nucleus"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 44,
+                svg: `<svg viewBox="0 0 300 140" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-50">
+                    <circle cx="150" cy="70" r="45" fill="#3b82f6" opacity="0.2" stroke="#2563eb" stroke-width="2"/>
+                    <circle cx="150" cy="70" r="20" fill="#ef4444" opacity="0.3" stroke="#dc2626" stroke-width="2"/>
+
+                    <line x1="150" y1="70" x2="195" y2="70" stroke="#2563eb" stroke-width="2"/>
+                    <text x="165" y="65" fill="#2563eb" font-size="10" font-weight="bold">R_Te</text>
+
+                    <line x1="150" y1="70" x2="130" y2="70" stroke="#dc2626" stroke-width="2"/>
+                    <text x="133" y="65" fill="#dc2626" font-size="10" font-weight="bold">R_Al</text>
+                </svg>`,
+                q: "The diagram compares nuclear radii of ${}^{27}_{13}\\text{Al}$ and ${}^{125}_{52}\\text{Te}$. What is the ratio of their nuclear radii $R_{\\text{Al}} : R_{\\text{Te}}$?",
+                options: [
+                    "$3 : 5$",
+                    "$9 : 25$",
+                    "$27 : 125$",
+                    "$1 : 2$"
+                ],
+                correct: 0
+            },
+            {
+                type: "diagram",
+                id: 45,
+                svg: `<svg viewBox="0 0 300 140" class="w-full max-w-xs mx-auto my-2 border rounded-lg bg-slate-900">
+                    <!-- Deuterium 1 -->
+                    <circle cx="50" cy="50" r="10" fill="#38bdf8"/>
+                    <circle cx="65" cy="50" r="10" fill="#f59e0b"/>
+                    <text x="42" y="32" fill="#ffffff" font-size="9" font-weight="bold">²H</text>
+
+                    <!-- Deuterium 2 -->
+                    <circle cx="50" cy="90" r="10" fill="#38bdf8"/>
+                    <circle cx="65" cy="90" r="10" fill="#f59e0b"/>
+                    <text x="42" y="115" fill="#ffffff" font-size="9" font-weight="bold">²H</text>
+
+                    <path d="M 85 70 L 150 70" stroke="#ffffff" stroke-width="3" marker-end="url(#arrowW)"/>
+
+                    <!-- Helium 4 -->
+                    <circle cx="190" cy="60" r="10" fill="#38bdf8"/>
+                    <circle cx="205" cy="60" r="10" fill="#38bdf8"/>
+                    <circle cx="190" cy="78" r="10" fill="#f59e0b"/>
+                    <circle cx="205" cy="78" r="10" fill="#f59e0b"/>
+                    <text x="188" y="105" fill="#ffffff" font-size="10" font-weight="bold">⁴He + 23.8 MeV</text>
+
+                    <defs>
+                      <marker id="arrowW" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffffff" />
+                      </marker>
+                    </defs>
+                </svg>`,
+                q: "What type of nuclear process is represented in the diagram above?",
+                options: [
+                    "Nuclear Fusion",
+                    "Nuclear Fission",
+                    "Alpha decay",
+                    "Beta decay"
+                ],
+                correct: 0
+            }
+        ];
+
+        // GLOBAL APP STATE VARIABLES
+        let candidateName = "";
+        let shuffledQuestions = [];
+        let userAnswers = {}; // { qIndex: optionIndex }
+        let markedForReview = {}; // { qIndex: boolean }
+        let visitedQuestions = {}; // { qIndex: boolean }
+        let currentQIndex = 0;
+        let timerSeconds = 3600; // 1 Hour (60 Mins)
+        let timerInterval = null;
+        let captchaAns = 0;
+        let examSubmitted = false;
+
+        // Initialize Captcha on Page Load
+        window.onload = function() {
+            generateCaptcha();
+        };
+
+        function generateCaptcha() {
+            const num1 = Math.floor(Math.random() * 9) + 1;
+            const num2 = Math.floor(Math.random() * 9) + 1;
+            captchaAns = num1 + num2;
+            document.getElementById('captchaDisplay').innerText = `${num1} + ${num2} = ?`;
+        }
+
+        // SEED SHUFFLE ALGORITHM FOR UNIQUE CANDIDATE QUESTION SEQUENCE
+        function seedShuffle(array, seedString) {
+            let hash = 0;
+            for (let i = 0; i < seedString.length; i++) {
+                hash = seedString.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            
+            let result = [...array];
+            let m = result.length, t, i;
+            while (m) {
+                let pseudoRandom = Math.abs(Math.sin(hash++)) * 10000;
+                i = Math.floor((pseudoRandom - Math.floor(pseudoRandom)) * m--);
+                t = result[m];
+                result[m] = result[i];
+                result[i] = t;
+            }
+            return result;
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('candidateName').value.trim();
+            const passInput = document.getElementById('examPassword').value.trim();
+            const captchaInput = parseInt(document.getElementById('captchaInput').value.trim());
+            const errorDiv = document.getElementById('loginError');
+
+            errorDiv.classList.add('hidden');
+
+            // 1. Password Verification (Current Date DDMMYYYY format)
+            const now = new Date();
+            const dd = String(now.getDate()).padStart(2, '0');
+            const mm = String(now.getMonth() + 1).padStart(2, '0');
+            const yyyy = now.getFullYear();
+            const expectedPass = `${dd}${mm}${yyyy}`;
+
+            if (passInput !== expectedPass) {
+                errorDiv.innerText = `Invalid Password! Password must match today's date in DDMMYYYY format.`;
+                errorDiv.classList.remove('hidden');
+                return;
+            }
+
+            // 2. Captcha Verification
+            if (captchaInput !== captchaAns) {
+                errorDiv.innerText = `Incorrect Captcha answer. Please try again.`;
+                errorDiv.classList.remove('hidden');
+                generateCaptcha();
+                return;
+            }
+
+            candidateName = nameInput;
+
+            // Seed shuffle question bank deterministically based on candidate name
+            shuffledQuestions = seedShuffle(masterQuestions, candidateName.toLowerCase());
+
+            // Update Header & Watermark Text
+            document.getElementById('headerCandidateName').innerText = candidateName;
+            document.getElementById('resCandidateName').innerText = candidateName;
+            
+            setupWatermark(candidateName);
+
+            // Hide Modal Gate & Launch Exam
+            document.getElementById('verificationGate').classList.add('hidden');
+
+            // Request Full Screen Enforcement
+            requestFullScreen();
+
+            // Start Exam Timer & Security Listeners
+            startTimer();
+            setupSecurityListeners();
+
+            // Render Palette & First Question
+            renderPalette();
+            loadQuestion(0);
+        }
+
+        function setupWatermark(name) {
+            const grid = document.getElementById('watermarkGrid');
+            grid.innerHTML = '';
+            grid.classList.remove('hidden');
+            for (let i = 0; i < 12; i++) {
+                const item = document.createElement('div');
+                item.className = 'watermark-item';
+                item.innerText = `${name}\nSoumendra Sir's Biology Classes - 8910587106`;
+                grid.appendChild(item);
+            }
+        }
+
+        function setupSecurityListeners() {
+            // Context menu block
+            document.addEventListener('contextmenu', e => e.preventDefault());
+
+            // Keydown block for inspect element & print screen
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'F12' || 
+                   (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                   (e.ctrlKey && e.key === 'u') ||
+                   e.key === 'PrintScreen') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            // Tab Switching / Visibility Change Auto-Submit
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden && !examSubmitted) {
+                    alert("SECURITY VIOLATION: You switched tabs or minimized the window. Your exam is being submitted immediately.");
+                    forceSubmitTest();
+                }
+            });
+
+            // Fullscreen change detection
+            document.addEventListener('fullscreenchange', function() {
+                if (!document.fullscreenElement && !examSubmitted) {
+                    alert("SECURITY VIOLATION: You exited Full-Screen mode. The exam will now auto-submit.");
+                    forceSubmitTest();
+                }
+            });
+        }
+
+        function requestFullScreen() {
+            const docEl = document.documentElement;
+            if (docEl.requestFullscreen) {
+                docEl.requestFullscreen().catch(err => console.log(err));
+            }
+        }
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                if (timerSeconds <= 0) {
+                    clearInterval(timerInterval);
+                    alert("Time's Up! Your exam is being submitted.");
+                    forceSubmitTest();
+                    return;
+                }
+                timerSeconds--;
+                const mins = Math.floor(timerSeconds / 60);
+                const secs = timerSeconds % 60;
+                document.getElementById('timerDisplay').innerText = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function renderPalette() {
+            const paletteGrid = document.getElementById('paletteGrid');
+            paletteGrid.innerHTML = '';
+
+            let countAnswered = 0;
+            let countNotAnswered = 0;
+            let countMarked = 0;
+            let countNotVisited = 0;
+
+            shuffledQuestions.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-8 h-8 rounded-full text-xs font-bold transition-all flex items-center justify-center shadow-sm border ';
+
+                const isAnswered = userAnswers[idx] !== undefined;
+                const isMarked = markedForReview[idx] === true;
+                const isVisited = visitedQuestions[idx] === true;
+
+                if (isMarked) {
+                    btn.classList.add('bg-amber-400', 'text-amber-950', 'border-amber-500');
+                    countMarked++;
+                } else if (isAnswered) {
+                    btn.classList.add('bg-emerald-500', 'text-white', 'border-emerald-600');
+                    countAnswered++;
+                } else if (isVisited) {
+                    btn.classList.add('bg-rose-500', 'text-white', 'border-rose-600');
+                    countNotAnswered++;
+                } else {
+                    btn.classList.add('bg-slate-200', 'text-slate-700', 'border-slate-300');
+                    countNotVisited++;
+                }
+
+                if (idx === currentQIndex) {
+                    btn.classList.add('ring-2', 'ring-indigo-700', 'ring-offset-1', 'scale-110');
+                }
+
+                btn.innerText = idx + 1;
+                btn.onclick = () => loadQuestion(idx);
+                paletteGrid.appendChild(btn);
+            });
+
+            document.getElementById('countAnswered').innerText = countAnswered;
+            document.getElementById('countNotAnswered').innerText = countNotAnswered;
+            document.getElementById('countMarked').innerText = countMarked;
+            document.getElementById('countNotVisited').innerText = countNotVisited;
+        }
+
+        function loadQuestion(idx) {
+            currentQIndex = idx;
+            visitedQuestions[idx] = true;
+
+            document.getElementById('questionNumberBadge').innerText = `Question ${idx + 1} of 45`;
+            document.getElementById('prevBtn').disabled = (idx === 0);
+
+            const q = shuffledQuestions[idx];
+            const area = document.getElementById('questionContentArea');
+            area.innerHTML = '';
+
+            let html = '';
+
+            // Case Study Prompt Banner
+            if (q.type === 'case') {
+                html += `<div class="mb-4 bg-indigo-50 border border-indigo-200 p-3.5 rounded-xl text-xs text-indigo-950">
+                    <h3 class="font-extrabold text-indigo-900 border-b border-indigo-200 pb-1 mb-1.5"><i class="fa-solid fa-book-open mr-1.5"></i> ${q.caseTitle}</h3>
+                    <p class="leading-relaxed font-medium">${q.caseText}</p>
+                </div>`;
+            }
+
+            // Inline Diagram (if diagram-based question)
+            if (q.type === 'diagram' && q.svg) {
+                html += `<div class="my-3 text-center">${q.svg}</div>`;
+            }
+
+            // Question Text
+            html += `<h2 class="text-sm md:text-base font-bold text-slate-800 mb-3 leading-snug">${q.q}</h2>`;
+
+            // Statements Rendering
+            if (q.type === 'statement') {
+                html += `<div class="mb-4 bg-slate-50 p-3 rounded-xl border border-slate-200 space-y-2 text-xs md:text-sm text-slate-800">
+                    <p><strong>Statement I:</strong> ${q.statement1}</p>
+                    <p><strong>Statement II:</strong> ${q.statement2}</p>
+                </div>`;
+            }
+
+            // Options List
+            html += `<div class="space-y-2.5 mt-4">`;
+            q.options.forEach((opt, oIdx) => {
+                const isSelected = userAnswers[idx] === oIdx;
+                html += `
+                    <label onclick="selectOption(${oIdx})" class="flex items-start space-x-3 p-3 rounded-xl border cursor-pointer transition-all text-xs md:text-sm ${
+                        isSelected ? 'bg-indigo-50 border-indigo-600 text-indigo-950 font-semibold ring-1 ring-indigo-500' : 'bg-white border-slate-200 hover:bg-slate-50 text-slate-700'
+                    }">
+                        <input type="radio" name="qOpt" ${isSelected ? 'checked' : ''} class="mt-0.5 text-indigo-600 focus:ring-indigo-500">
+                        <span class="flex-1">${opt}</span>
+                    </label>
+                `;
+            });
+            html += `</div>`;
+
+            area.innerHTML = html;
+            renderPalette();
+
+            // Re-render MathJax physics formulas on screen
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise([area]);
+            }
+        }
+
+        function selectOption(oIdx) {
+            userAnswers[currentQIndex] = oIdx;
+            delete markedForReview[currentQIndex];
+            loadQuestion(currentQIndex);
+        }
+
+        function clearResponse() {
+            delete userAnswers[currentQIndex];
+            delete markedForReview[currentQIndex];
+            loadQuestion(currentQIndex);
+        }
+
+        function markForReview() {
+            markedForReview[currentQIndex] = true;
+            renderPalette();
+            nextQuestion();
+        }
+
+        function prevQuestion() {
+            if (currentQIndex > 0) {
+                loadQuestion(currentQIndex - 1);
+            }
+        }
+
+        function nextQuestion() {
+            if (currentQIndex < shuffledQuestions.length - 1) {
+                loadQuestion(currentQIndex + 1);
+            }
+        }
+
+        function confirmSubmitTest() {
+            const attempted = Object.keys(userAnswers).length;
+            if (confirm(`Are you sure you want to submit your Physics exam?\n\nTotal Attempted: ${attempted} / 45`)) {
+                forceSubmitTest();
+            }
+        }
+
+        function forceSubmitTest() {
+            examSubmitted = true;
+            clearInterval(timerInterval);
+
+            // Calculate Marks (+4 correct, -1 wrong, 0 unattempted)
+            let correctCount = 0;
+            let incorrectCount = 0;
+            let unattemptedCount = 0;
+
+            shuffledQuestions.forEach((q, idx) => {
+                const ans = userAnswers[idx];
+                if (ans === undefined) {
+                    unattemptedCount++;
+                } else if (ans === q.correct) {
+                    correctCount++;
+                } else {
+                    incorrectCount++;
+                }
+            });
+
+            const totalScore = (correctCount * 4) - (incorrectCount * 1);
+            const totalAttempted = correctCount + incorrectCount;
+            const accuracy = totalAttempted > 0 ? ((correctCount / totalAttempted) * 100).toFixed(1) : 0;
+
+            // Display Score Summary
+            document.getElementById('resTotalScore').innerText = `${totalScore} / 180`;
+            document.getElementById('resAttempted').innerText = `${totalAttempted} / 45`;
+            document.getElementById('resAccuracy').innerText = `${accuracy}%`;
+            document.getElementById('resCorrect').innerText = correctCount;
+            document.getElementById('resIncorrect').innerText = incorrectCount;
+            document.getElementById('resUnattempted').innerText = unattemptedCount;
+
+            // Display Results Modal
+            document.getElementById('resultModal').classList.remove('hidden');
+
+            // Render Chart.js Graphical Analysis
+            renderChart(correctCount, incorrectCount, unattemptedCount);
+        }
+
+        function renderChart(correct, incorrect, unattempted) {
+            const ctx = document.getElementById('resultChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Correct (+4)', 'Incorrect (-1)', 'Unattempted'],
+                    datasets: [{
+                        data: [correct, incorrect, unattempted],
+                        backgroundColor: ['#10b981', '#f43f5e', '#cbd5e1'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { size: 11, weight: 'bold' },
+                                boxWidth: 12
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function sendMarksToWhatsApp() {
+            const card = document.getElementById('resultCardCapture');
+
+            // Convert Scorecard DOM element to high-resolution PNG image
+            html2canvas(card, { scale: 2 }).then(canvas => {
+                const imageBase64 = canvas.toDataURL("image/png");
+
+                // Prepare WhatsApp Pre-filled message with breakdown
+                const scoreText = document.getElementById('resTotalScore').innerText;
+                const accuracyText = document.getElementById('resAccuracy').innerText;
+                const correct = document.getElementById('resCorrect').innerText;
+                const incorrect = document.getElementById('resIncorrect').innerText;
+
+                const msg = encodeURIComponent(
+                    `*NEET PHYSICS CBT EXAM RESULT REPORT*\n` +
+                    `*Topic:* NEET PHYSICS XII EXAM SERIES 7 SET A (Atoms & Nuclei)\n` +
+                    `*Candidate Name:* ${candidateName}\n` +
+                    `*Total Score:* ${scoreText}\n` +
+                    `*Accuracy:* ${accuracyText}\n` +
+                    `*Correct Answers:* ${correct}\n` +
+                    `*Incorrect Answers:* ${incorrect}\n\n` +
+                    `_Sir, I have completed my CBT Physics exam. Attached is my score summary card screenshot._`
+                );
+
+                const waUrl = `https://api.whatsapp.com/send?phone=918910587106&text=${msg}`;
+                
+                // Prompt candidate to download screenshot image
+                const link = document.createElement('a');
+                link.download = `${candidateName.replace(/\s+/g, '_')}_NEET_Physics_AtomsNuclei_Result.png`;
+                link.href = imageBase64;
+                link.click();
+
+                // Open WhatsApp chat window
+                window.open(waUrl, '_blank');
+            });
+        }
+    </script>
+</body>
+</html>
